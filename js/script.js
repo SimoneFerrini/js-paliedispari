@@ -59,7 +59,7 @@ function isPalindrome(string){
     let j = string.length-1;
 
     while (i < j){
-        if(string[i] != string[j]){
+        if(string[i].toLowerCase() != string[j].toLowerCase()){
             return false;
         }
         i++;
@@ -112,3 +112,62 @@ metodo isPair:
     return true
 -Altrimenti return False
 */
+
+let pariDispariEl = document.getElementById("pari-dispari");
+let userNumberEl = document.getElementById("pd-user-number");
+let pcNumberEl = document.getElementById("pd-pc-number");
+let totalResultEl = document.getElementById("pd-result");
+let btnPdPlayEl = document.getElementById("pd-play");
+
+btnPdPlayEl.addEventListener("click", function(){
+        let pariDispari = pariDispariEl.value;
+        
+        let userNumber = parseInt(userNumberEl.value);
+        
+        console.log(pariDispari);
+        console.log(userNumber);
+
+        if(pariDispari != "pari"){
+             
+            if(pariDispari != "dispari"){
+
+                alert("Inserire solo 'pari' o 'dispari' ");
+            }
+        } else if(userNumber < 1 || userNumber > 5 || isNaN(userNumber)){
+
+            alert("Inserire un numero da 1 a 5 compresi");
+
+        }else{
+            let pcNumber = random(1,5);
+            console.log(pcNumber);
+            let somma = userNumber + pcNumber;
+            console.log(somma);
+            let pdNumber = isPair(somma);
+            console.log(pdNumber);
+    
+            if(pdNumber == pariDispari){
+                totalResultEl.innerHTML = "Il totale è "+ somma +
+                    ", " + pdNumber + ". Hai vinto!"
+            } else{
+                totalResultEl.innerHTML = "Il totale è "+ somma +
+                    ", " + pdNumber + ". Hai perso..."
+            }
+        }
+    
+
+})
+
+function random(min, max){
+    let randomNum = Math.floor(Math.random() * (max - min + 1))  + min ;
+    return randomNum;
+}
+
+function isPair(num){
+    let result;
+    if(num % 2 == 0){
+        result = "pari";
+    }else {
+        result = "dispari"
+    }
+    return result;
+}
