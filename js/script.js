@@ -72,3 +72,43 @@ function isPalindrome(string){
 
 
 /*Pari o Dispari? ----------------------------------------------------*/
+
+/*
+-creare una varEl per input pari/dispari
+-" per input numero da 1 a 5
+-creare una var dove inserire il numero del pc
+-creare una varEl per il risultato totale da collegare a span
+-" per il button gioca!
+
+-creare var risultato
+-creare var risultatoPariDispari;
+
+button.onClick{
+
+-fare controlli sugli input
+
+
+-richiami metod random1-5 per assegnare il val a pc
+-sommi il totale e salvi in risultato
+-assegni a risultatoPariDispari totale.isPair con metodo
+-SE totale==true && input.value == pari 
+    risultatoTotale.innerHTML = il totale è" + totale
+     + ", " + risultatoPariDispari + "hai vinto"
+ALTRIMENTI SE totale==false && input.value == dispari 
+    risultatoTotale.innerHTML = il totale è" + totale
+     + ", " + risultatoPariDispari + "hai vinto"
+ALTRIMENTI
+    risultatoTotale.innerHTML = il totale è" + totale
+     + ", " + risultatoPariDispari + "hai perso"
+}
+
+metodo random:
+-creare metodo che presi in input due num(min,max)
+-restituisca in modo casuale un numero, compreso fra le due cifre
+
+metodo isPair: 
+-creare un metodo che preso in input un numero
+-SE numero è pari
+    return true
+-Altrimenti return False
+*/
