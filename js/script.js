@@ -48,7 +48,6 @@ btnPalindrome.addEventListener("click", function(){
 
     if(userParola == null || userParola == ""){
         alert("Invalid Argument");
-        userParolaEl.innerHTML = "";
     } else{
         outputEl.innerHTML = isPalindrome(userParola);
     }
@@ -66,6 +65,10 @@ function isPalindrome(string){
         i++;
         j--;
     } 
-
     return true;
 }
+
+/*fine palindromo------------------------------------------------------*/
+
+
+/*Pari o Dispari? ----------------------------------------------------*/
