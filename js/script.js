@@ -35,17 +35,37 @@ onClick:
         return true
 */
 
-let userParola = (document.getElementById("user-parola")).value;
+let userParolaEl = document.getElementById("user-parola");
 
 let outputEl = document.getElementById("palindrome-output");
 
 let btnPalindrome = document.getElementById("btn-palindromo");
 
+let userParola;
+
 btnPalindrome.addEventListener("click", function(){
+    userParola = userParolaEl.value;
+
     if(userParola == null || userParola == ""){
         alert("Invalid Argument");
-        document.getElementById("user-parola").innerHTML = "";
+        userParolaEl.innerHTML = "";
     } else{
-        
+        outputEl.innerHTML = isPalindrome(userParola);
     }
 })
+
+
+function isPalindrome(string){
+    let i = 0;
+    let j = string.length-1;
+
+    while (i < j){
+        if(string[i] != string[j]){
+            return false;
+        }
+        i++;
+        j--;
+    } 
+
+    return true;
+}
