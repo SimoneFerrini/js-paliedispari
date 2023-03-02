@@ -1,0 +1,17 @@
+.pd-style{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main-display{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.input-display{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}

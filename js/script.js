@@ -123,9 +123,6 @@ btnPdPlayEl.addEventListener("click", function(){
         let pariDispari = pariDispariEl.value;
         
         let userNumber = parseInt(userNumberEl.value);
-        
-        console.log(pariDispari);
-        console.log(userNumber);
 
         if(pariDispari != "pari"){
              
@@ -139,11 +136,13 @@ btnPdPlayEl.addEventListener("click", function(){
 
         }else{
             let pcNumber = random(1,5);
-            console.log(pcNumber);
+
+            pcNumberEl.innerHTML = "Il numero del computer è " + pcNumber;
+            
             let somma = userNumber + pcNumber;
-            console.log(somma);
+           
             let pdNumber = isPair(somma);
-            console.log(pdNumber);
+        
     
             if(pdNumber == pariDispari){
                 totalResultEl.innerHTML = "Il totale è "+ somma +
